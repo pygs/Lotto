@@ -7,6 +7,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::rand;
+
 int liczba[6];
 int random[6];
 int i, j;
@@ -24,19 +25,22 @@ int main()
     for(i=0; i<6; i++)
     {
         cin >> liczba[i];
-        if(liczba[i]==random[i])
+    }
+
+    system("cls");
+
+    cout << "Twoja liczba \t \t \tWylosowane liczby \t \tCzy trafiles?" << endl;
+    for(j=0; j<6; j++)
+    {
+        cout << liczba[j] << "\t \t \t \t" << random[j];
+        if(liczba[j]==random[j])
         {
-            cout << "Tak" << endl;
+            cout << "\t \t \t \tTak";
         }
         else
         {
-            cout << "Nie" << endl;
+            cout << "\t \t \t \tNie";
         }
-    }
-    system("cls");
-    cout << "Twoja liczba \t \t \tWylosowane liczby" << endl;
-    for(j=0; j<6; j++)
-    {
-        cout << liczba[j] << "\t \t \t \t" << random[j] << endl;
+        cout << endl;
     }
 }
